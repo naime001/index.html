@@ -1,28 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hacking Surprise</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise Hack</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <h1>Welcome to the Surprise Hack</h1>
+    <button class="btn" id="hackButton">Surprise</button>
 
-  <div class="container">
-    <div class="hacker-box">
-      <h1 class="hacker-heading">Access Granted</h1>
-      <p class="status">Initializing... <span id="status-text">Loading...</span></p>
-      <button id="revealButton">Initiate Hack</button>
-      <div id="secret-message" class="hidden">
-        <p>💻 System Hacked! Secret revealed...</p>
-        <p id="hack-message">Message: You're the one who holds the secret now...</p>
-      </div>
-      <div id="console" class="console hidden">
-        <pre id="console-output">Connecting to network...</pre>
-      </div>
+    <div id="console">
+        <div id="status"></div>
+        <div id="log"></div>
+        <div class="progress-bar"></div>
     </div>
-  </div>
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
