@@ -15,7 +15,7 @@ function revealSecret() {
     setTimeout(() => {
         showConsoleMessage("💻 System Hacked! Secret revealed...");
         setTimeout(() => {
-            showConsoleMessage("Message: You're the one who holds the secret now...");
+            showConsoleMessage("Message: "Love from your hacker 🥺❤️");
         }, 2000);
     }, 1500);
 }
@@ -31,6 +31,8 @@ function hackProcess() {
                 showConsoleMessage("Decrypting files...");
                 setTimeout(() => {
                     showConsoleMessage("Bypassing firewall...");
+                    setTimeout(() => {
+                        showConsoleMessage("I Love You🫶🏻...");
                     setTimeout(() => {
                         showConsoleMessage("Access granted...");
                         setTimeout(() => {
