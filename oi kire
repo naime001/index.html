@@ -15,7 +15,10 @@
       <button id="revealButton">Initiate Hack</button>
       <div id="secret-message" class="hidden">
         <p>💻 System Hacked! Secret revealed...</p>
-        <p>Message: You're the one who holds the secret now...</p>
+        <p id="hack-message">Message: You're the one who holds the secret now...</p>
+      </div>
+      <div id="console" class="console hidden">
+        <pre id="console-output">Connecting to network...</pre>
       </div>
     </div>
   </div>
