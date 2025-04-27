@@ -1,50 +1,50 @@
-// Elements
-const revealButton = document.getElementById('revealButton');
-const secretMessage = document.getElementById('secret-message');
-const statusText = document.getElementById('status-text');
-const consoleOutput = document.getElementById('console-output');
-const consoleBox = document.getElementById('console');
-const hackMessage = document.getElementById('hack-message');
+const hackButton = document.getElementById('hackButton');
+const statusText = document.getElementById('status');
+const log = document.getElementById('log');
 
-// Function to simulate hacking process with random logs
-function hackProcess() {
-  statusText.innerHTML = "Hacking in progress...";
-  setTimeout(() => {
-    showConsoleMessage("Connecting to server...");
-    setTimeout(() => {
-      showConsoleMessage("Verifying password...");
-      setTimeout(() => {
-        showConsoleMessage("Decrypting files...");
-        setTimeout(() => {
-          showConsoleMessage("Access granted...");
-          setTimeout(() => {
-            revealSecret();
-          }, 1000);
-        }, 2000);
-      }, 1000);
-    }, 2000);
-  }, 1000);
-}
+hackButton.addEventListener('click', hackProcess);
 
-// Function to show console messages
 function showConsoleMessage(message) {
-  consoleOutput.innerText += "\n" + message;
-  consoleBox.style.display = 'block';
-  consoleOutput.scrollTop = consoleOutput.scrollHeight; // Auto scroll
+    const newMessage = document.createElement('p');
+    newMessage.classList.add('console-text');
+    newMessage.innerHTML = message;
+    log.appendChild(newMessage);
 }
 
-// Reveal secret message
 function revealSecret() {
-  secretMessage.style.display = 'block';
-  hackMessage.innerHTML = "Message: You're the one who holds the secret now...";
-  revealButton.innerHTML = "Complete";
-  revealButton.style.backgroundColor = "#00ff00";
-  revealButton.style.cursor = 'not-allowed';
-  consoleBox.style.display = 'none'; // Hide console after completion
+    setTimeout(() => {
+        showConsoleMessage("💻 System Hacked! Secret revealed...");
+        setTimeout(() => {
+            showConsoleMessage("Message: You're the one who holds the secret now...");
+        }, 2000);
+    }, 1500);
 }
 
-// Event Listeners
-revealButton.addEventListener('click', function() {
-  hackProcess();
-  revealButton.style.display = 'none'; // Hide button after start
-});
+// Simulate the hacking process with faster steps
+function hackProcess() {
+    statusText.innerHTML = "Hacking in progress...";
+    setTimeout(() => {
+        showConsoleMessage("Connecting to server...");
+        setTimeout(() => {
+            showConsoleMessage("Verifying password...");
+            setTimeout(() => {
+                showConsoleMessage("Decrypting files...");
+                setTimeout(() => {
+                    showConsoleMessage("Bypassing firewall...");
+                    setTimeout(() => {
+                        showConsoleMessage("Access granted...");
+                        setTimeout(() => {
+                            showConsoleMessage("System ID: 192.168.1.100");
+                            setTimeout(() => {
+                                showConsoleMessage("IP Address: 103.45.67.89");
+                                setTimeout(() => {
+                                    revealSecret();
+                                }, 500);
+                            }, 800);
+                        }, 1000);
+                    }, 500);
+                }, 800);
+            }, 600);
+        }, 700);
+    }, 800);
+}
