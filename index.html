@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise Hack</title>
+    <style>
+        body {
+            background-color: black;
+            color: #00FF00;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 18px;
+        }
+        .content {
+            margin-top: 100px;
+        }
+        .final-message {
+            color: #FF0000;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <p>Initializing Cyber Attack...</p>
+        <p>Bypassing Firewalls...</p>
+        <p>Deactivating Security Systems...</p>
+        <p>Decrypting Secret Message...</p>
+        <p>Injecting Love Protocol...</p>
+        <p class="final-message">Complete: SURPRISE SUCCESSFUL</p>
+        <p class="final-message">You have been hacked by [Your Name]</p>
+        <p class="final-message">Love from your hacker ❤️</p>
+    </div>
+
+    <script>
+        let messages = [
+            "Initializing Cyber Attack...",
+            "Bypassing Firewalls...",
+            "Deactivating Security Systems...",
+            "Decrypting Secret Message...",
+            "Injecting Love Protocol...",
+            "Complete: SURPRISE SUCCESSFUL",
+            "You have been hacked by [Your Name]",
+            "Love from your hacker ❤️"
+        ];
+
+        let i = 0;
+        let content = document.querySelector('.content');
+
+        function showNextMessage() {
+            if (i < messages.length) {
+                let para = document.createElement("p");
+                para.innerText = messages[i];
+                content.appendChild(para);
+                i++;
+                setTimeout(showNextMessage, 1500);
+            }
+        }
+
+        showNextMessage();
+    </script>
+</body>
+</html>
