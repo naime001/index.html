@@ -3,15 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Surprise Message</title>
+  <title>Hacking Surprise</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <div class="container">
-    <h1 class="heading">🎉 Surprise 🎉</h1>
-    <div class="message">
-      <p id="secretMessage">Welcome to the surprise world! You're the one who holds the secret now... <span class="reveal">Click to Reveal</span></p>
+    <div class="hacker-box">
+      <h1 class="hacker-heading">Access Granted</h1>
+      <p class="status">Initializing... <span id="status-text">Loading...</span></p>
+      <button id="revealButton">Initiate Hack</button>
+      <div id="secret-message" class="hidden">
+        <p>💻 System Hacked! Secret revealed...</p>
+        <p>Message: You're the one who holds the secret now...</p>
+      </div>
     </div>
   </div>
 
