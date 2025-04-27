@@ -1,91 +1,60 @@
-/* General styling */
+/* Basic styling */
 body {
-  background-color: #000;
-  color: #00ff00;
-  font-family: 'Courier New', Courier, monospace;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  font-size: 1.5rem;
-  overflow: hidden;
+    background-color: black;
+    color: lime;
+    font-family: 'Courier New', monospace;
+    text-align: center;
+    padding-top: 50px;
 }
 
-.container {
-  width: 80%;
-  text-align: center;
+.btn {
+    background-color: lime;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    font-size: 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
-.hacker-box {
-  background: rgba(0, 0, 0, 0.7);
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px 5px #00ff00;
+/* Progress bar animation */
+@keyframes progress {
+    0% { width: 0; }
+    100% { width: 100%; }
 }
 
-.hacker-heading {
-  font-size: 3rem;
-  animation: fadeIn 3s ease-out;
+.progress-bar {
+    width: 0;
+    height: 5px;
+    background-color: #00ff00;
+    animation: progress 2s linear forwards;
 }
 
-.status {
-  font-size: 1.2rem;
-  color: #ffff00;
-  margin-top: 20px;
-  animation: blink 1.5s infinite;
+/* Console text typing effect */
+@keyframes typing {
+    0% { width: 0; }
+    100% { width: 100%; }
 }
 
-button {
-  background-color: #ff0000;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  margin-top: 30px;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 1rem;
-  box-shadow: 0 0 10px 5px #ff0000;
-  transition: all 0.3s ease-in-out;
+.console-text {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #00ff00;
+    width: 0;
+    animation: typing 2s steps(30) 1s forwards;
 }
 
-button:hover {
-  background-color: #00ff00;
-  box-shadow: 0 0 15px 5px #00ff00;
-  color: #000;
+/* Console container styling */
+#console {
+    margin-top: 30px;
+    font-size: 20px;
+    line-height: 2;
 }
 
-#secret-message {
-  margin-top: 20px;
-  display: none;
-  color: #ffcc00;
-}
-
-.console {
-  margin-top: 30px;
-  font-size: 1.2rem;
-  background-color: #111;
-  color: #00ff00;
-  padding: 20px;
-  border-radius: 5px;
-  display: none;
-  text-align: left;
-  box-shadow: 0 0 15px 5px #00ff00;
-  width: 80%;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}
-
-.hidden {
-  display: none;
-}
-
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-@keyframes blink {
-  50% { opacity: 0; }
+#status {
+    margin-top: 10px;
+    font-size: 18px;
+    color: white;
 }
