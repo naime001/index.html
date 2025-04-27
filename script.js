@@ -20,7 +20,15 @@ function revealSecret() {
     }, 1500);
 }
 
-// Simulate the hacking process with faster steps
+// Add couple sticker
+function showCoupleSticker() {
+    const sticker = document.createElement('img');
+    sticker.src = 'https://example.com/couple-sticker.png'; // Replace this with the URL of the sticker image
+    sticker.alt = 'Couple Sticker';
+    sticker.classList.add('https://images.app.goo.gl/NHoJNJ48hdgmVMqm7'); // Add a class for styling
+    document.body.appendChild(sticker);
+}
+
 function hackProcess() {
     statusText.innerHTML = "Hacking in progress...";
     setTimeout(() => {
@@ -41,13 +49,14 @@ function hackProcess() {
                                     showConsoleMessage("IP Address: 103.45.67.89");
                                     setTimeout(() => {
                                         revealSecret();
-                                    }, 500); // 500ms delay before revealing the secret
-                                }, 800); // 800ms delay for IP Address message
-                            }, 1000); // 1000ms delay for Access granted message
-                        }, 500); // 500ms delay before "I Love You" message
-                    }, 800); // 800ms delay for bypassing firewall
-                }, 600); // 600ms delay for decrypting files
-            }, 700); // 700ms delay for verifying password
-        }, 800); // 800ms delay for connecting to server
-    }, 500); // 500ms delay before starting the hack process
+                                        showCoupleSticker(); // Show the couple sticker here
+                                    }, 500);
+                                }, 800);
+                            }, 1000);
+                        }, 500);
+                    }, 800);
+                }, 600);
+            }, 700);
+        }, 800);
+    }, 500);
 }
