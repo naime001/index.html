@@ -1,10 +1,28 @@
-/* Basic styling */
+/* Global styles */
 body {
     background-color: black;
     color: lime;
     font-family: 'Courier New', monospace;
     text-align: center;
-    padding-top: 50px;
+    margin: 0;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    width: 70%;
+    max-width: 900px;
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
 }
 
 .btn {
@@ -16,6 +34,25 @@ body {
     cursor: pointer;
     text-transform: uppercase;
     font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: green;
+    color: white;
+    transform: scale(1.1);
+}
+
+#console {
+    margin-top: 30px;
+    font-size: 20px;
+    line-height: 2;
+    border: 2px solid lime;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow-y: auto;
+    max-height: 400px;
+    border-radius: 10px;
 }
 
 /* Progress bar animation */
@@ -46,13 +83,7 @@ body {
     animation: typing 2s steps(30) 1s forwards;
 }
 
-/* Console container styling */
-#console {
-    margin-top: 30px;
-    font-size: 20px;
-    line-height: 2;
-}
-
+/* Status and log text */
 #status {
     margin-top: 10px;
     font-size: 18px;
