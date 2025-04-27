@@ -1,60 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Surprise</title>
-    <style>
-        body {
-            background-color: black;
-            color: #00ff00;
-            font-family: 'Courier New', Courier, monospace;
-            text-align: center;
-            margin-top: 15%;
-            overflow: hidden;
-        }
-        h1 {
-            font-size: 2.5em;
-            animation: blink 1s infinite;
-        }
-        p {
-            font-size: 1.2em;
-            margin-top: 20px;
-            animation: slide 2s forwards;
-            opacity: 0;
-        }
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
-        }
-        @keyframes slide {
-            0% { transform: translateY(50px); opacity: 0; }
-            100% { transform: translateY(0); opacity: 1; }
-        }
-        .hack-effect {
-            font-size: 1em;
-            white-space: pre-wrap;
-            word-break: break-word;
-            margin-top: 30px;
-            animation: type 6s steps(60) 1;
-            overflow: hidden;
-            border-right: 2px solid #00ff00;
-        }
-        @keyframes type {
-            from { width: 0 }
-            to { width: 100% }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surprise Message</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Access Granted</h1>
-    <p>Welcome to the Secret Zone!</p>
-    <div class="hack-effect">
-        Initializing...<br>
-        Bypassing Firewall...<br>
-        Accessing Secure Database...<br>
-        Extracting Secret Message...<br>
-        <br>
-        Love You Forever...
+
+  <div class="container">
+    <h1 class="heading">🎉 Surprise 🎉</h1>
+    <div class="message">
+      <p id="secretMessage">Welcome to the surprise world! You're the one who holds the secret now... <span class="reveal">Click to Reveal</span></p>
     </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
