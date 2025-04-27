@@ -1,47 +1,76 @@
+/* General styling */
 body {
-  background-color: #1a1a1a;
-  color: #f0f0f0;
-  font-family: 'Arial', sans-serif;
+  background-color: #000;
+  color: #00ff00;
+  font-family: 'Courier New', Courier, monospace;
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  transition: all 0.3s ease;
+  font-size: 1.5rem;
+  overflow: hidden;
 }
 
 .container {
+  width: 80%;
   text-align: center;
-  padding: 20px;
-  background-color: #333;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
-  width: 60%;
 }
 
-.heading {
+.hacker-box {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 5px #00ff00;
+}
+
+.hacker-heading {
   font-size: 3rem;
-  margin-bottom: 20px;
-  animation: fadeIn 2s ease-out;
+  animation: fadeIn 3s ease-out;
 }
 
-.message {
+.status {
   font-size: 1.2rem;
-  line-height: 1.6;
+  color: #ffff00;
+  margin-top: 20px;
+  animation: blink 1.5s infinite;
 }
 
-.reveal {
-  color: #ff6666;
+button {
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 30px;
   cursor: pointer;
-  font-weight: bold;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-shadow: 0 0 10px 5px #ff0000;
+  transition: all 0.3s ease-in-out;
 }
 
-.reveal:hover {
-  color: #ff3366;
+button:hover {
+  background-color: #00ff00;
+  box-shadow: 0 0 15px 5px #00ff00;
+  color: #000;
+}
+
+#secret-message {
+  margin-top: 20px;
+  display: none;
+  color: #ffcc00;
+}
+
+.hidden {
+  display: none;
 }
 
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
 }
