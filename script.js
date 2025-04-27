@@ -20,15 +20,6 @@ function revealSecret() {
     }, 1500);
 }
 
-// Add couple sticker
-function showCoupleSticker() {
-    const sticker = document.createElement('img');
-    sticker.src = 'https://media-hosting.imagekit.io/b6071286c3664733/file_00000000bdfc61f78e0e04afcb6f6519_conversation_id=680e0dd1-81d4-8011-bd1c-77a3f1c05a37&message_id=68ed9711-8c30-434a-b235-66cee576fb3c.png'; // URL of the sticker image
-    sticker.alt = 'Couple Sticker';
-    sticker.classList.add('couple-sticker'); // Add a class for styling if needed
-    document.body.appendChild(sticker);
-}
-
 function hackProcess() {
     statusText.innerHTML = "Hacking in progress...";
     setTimeout(() => {
@@ -49,7 +40,6 @@ function hackProcess() {
                                     showConsoleMessage("IP Address: 103.45.67.89");
                                     setTimeout(() => {
                                         revealSecret();
-                                        showCoupleSticker(); // Show the couple sticker here
                                     }, 500);
                                 }, 800);
                             }, 1000);
